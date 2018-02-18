@@ -1,0 +1,24 @@
+<div id="header">
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="logo navbar-brand">
+      <h1><%= link_to 'Fredfy', welcome_index_path %></h1>
+      <h2>Learn Code Reapeat</h2>
+    </div>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarsExampleDefault">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item active">
+          <%= link_to 'signup', welcome_signup_path, class: "nav-link" %>
+        </li>
+        <li>
+          <%= link_to 'signin', welcome_signin_path, class: "nav-link" %>
+        </li>
+        <li>
+          <%= link_to 'profile', welcome_profile_path, class: "nav-link" %>
+        </li>
+      </ul>
+    </div>
+  </nav>
+</div>

@@ -1,4 +1,10 @@
-<h1>Game#world</h1>
-<p>Find me in app/views/game/world.html.erb</p>
+<%= render 'welcome/header' %>
 
-<%= render 'layouts/links' %>
+<div id="world" class="container content">
+  <h1>Choose a world</h1>
+  <div class="block">
+    <%= link_to 'Start the adventure', game_map_path, class: "btn btn-outline-primary" %>
+  </div>
+</div>
+
+<%= render 'welcome/footer' %>

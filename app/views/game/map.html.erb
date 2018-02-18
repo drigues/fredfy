@@ -1,4 +1,12 @@
-<h1>Game#map</h1>
-<p>Find me in app/views/game/map.html.erb</p>
+<%= render 'welcome/header' %>
 
-<%= render 'layouts/links' %>
+<div id="map" class="container content">
+  <h1>Map</h1>
+  <div class="block">
+    <%= link_to 'Stage 1', game_stage_path, class: "btn btn-outline-primary" %>
+    <p>Stage 2</p>
+    <p>Stage 3</p>
+  </div>
+</div>
+
+<%= render 'welcome/footer' %>

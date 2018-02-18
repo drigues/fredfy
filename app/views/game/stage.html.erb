@@ -1,4 +1,10 @@
-<h1>Game#stage</h1>
-<p>Find me in app/views/game/stage.html.erb</p>
+<%= render 'welcome/header' %>
 
-<%= render 'layouts/links' %>
+<div id="stage" class="container content">
+  <h1>Stage</h1>
+  <div class="block">
+    <%= link_to 'Question', game_question_path, class: "btn btn-outline-primary" %>
+  </div>
+</div>
+
+<%= render 'welcome/footer' %>

@@ -1,4 +1,10 @@
-<h1>Welcome#index</h1>
-<p>Find me in app/views/welcome/index.html.erb</p>
+<%= render 'welcome/header' %>
 
-<%= render 'layouts/links' %>
+<div id="home" class="container content">
+  <h1>Welcome to Fredfy on Rails</h1>
+  <div class="block">
+    <%= link_to 'Start a new game', game_hero_path, class: "btn btn-outline-primary" %>
+  </div>
+</div>
+
+<%= render 'welcome/footer' %>
