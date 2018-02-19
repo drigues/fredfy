@@ -23,7 +23,7 @@ html .container-fluid {
 
 // header
 .logo h1 {
-  font-family: 'Bungee', cursive;
+  font-family: 'Bungee', Impact, Arial;
   font-size: 2em;
   & a {
     color: $tx-a;
@@ -31,7 +31,7 @@ html .container-fluid {
 }
 
 .logo h2 {
-  font-family: 'Press Start 2P', cursive;
+  font-family: 'Press Start 2P', Verdana, Arial;
   font-size: 1em;
   margin-top: -10px;
 }
@@ -71,8 +71,10 @@ html .container-fluid {
   width: 100%;
   box-sizing: border-box;
   padding: 30px 20px 50px;
+
   & h1 {
-    font-family: 'Press Start 2P', cursive;
+    font-family: 'Press Start 2P', Verdana, Arial;
     font-size: 1.5em;
+    text-align: center;
   }
 }

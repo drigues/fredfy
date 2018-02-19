@@ -3,7 +3,19 @@
 <div id="world" class="container content">
   <h1>Choose a world</h1>
   <div class="block">
-    <%= link_to 'Start the adventure', game_map_path, class: "btn btn-outline-primary" %>
+
+
+    <div class="field">
+      <%= radio_button_tag(:age, "child") %>
+      <%= label_tag(:age_child, "HTML5") %>
+
+      <%= radio_button_tag(:age, "adult") %>
+      <%= label_tag(:age_adult, "CSS3") %>
+
+      <%= radio_button_tag(:age, "adult") %>
+      <%= label_tag(:age_adult, "JavaScript") %>
+    </div>
+    <%= link_to 'Start the adventure', game_map_path, class: "btn btn-outline-primary btn-block" %>
   </div>
 </div>
 

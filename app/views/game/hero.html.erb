@@ -2,8 +2,21 @@
 
 <div id="hero" class="container content">
   <h1>Choose a Hero</h1>
+  <div class="field">
+    <%= radio_button_tag(:age, "child") %>
+    <%= label_tag(:age_child, "Fred") %>
+
+    <%= radio_button_tag(:age, "adult") %>
+    <%= label_tag(:age_adult, "Chloe") %>
+
+    <%= radio_button_tag(:age, "adult") %>
+    <%= label_tag(:age_adult, "Greg") %>
+
+    <%= radio_button_tag(:age, "adult") %>
+    <%= label_tag(:age_adult, "Piu") %>
+  </div>
   <div class="block">
-    <%= link_to 'Continue', game_world_path, class: "btn btn-outline-primary" %>
+    <%= link_to 'Continue', game_world_path, class: "btn btn-outline-primary btn-block" %>
   </div>
 </div>
 
