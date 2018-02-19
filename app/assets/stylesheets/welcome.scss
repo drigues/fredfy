@@ -2,6 +2,77 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-.a {
-  margin-top: 150px;
+@import '_variables.scss';
+@import url('https://fonts.googleapis.com/css?family=Bungee|Press+Start+2P|Roboto');
+// font-family: 'Press Start 2P', cursive;
+// font-family: 'Bungee', cursive;
+// font-family: 'Roboto', sans-serif;
+
+// global
+html .container-fluid {
+  padding: 0;
+  font-family: 'Roboto', sans-serif;
+  font-size: 1em;
+
+  line-height: 1em;
+}
+
+.bg-light {
+  background: #ebebeb !important;
+}
+
+// header
+.logo h1 {
+  font-family: 'Bungee', cursive;
+  font-size: 2em;
+  & a {
+    color: $tx-a;
+  }
+}
+
+.logo h2 {
+  font-family: 'Press Start 2P', cursive;
+  font-size: 1em;
+  margin-top: -10px;
+}
+
+.mr-auto,
+.mx-auto {
+  margin-left: auto !important;
+  margin-right: 0 !important;
+}
+
+// footer
+
+#footer {
+  max-width: $sz-full;
+  margin: 10px auto;
+  border-top: 1px solid rgba(0, 0, 0, 0.2);
+  padding: 10px;
+  display: flex;
+  justify-content: space-around;
+
+  & > div {
+    display: flex;
+  }
+  & .logo {
+    flex-direction: column;
+    flex-grow: 1;
+  }
+  & .links {
+    display: flex;
+    justify-content: space-between;
+    flex-grow: 1;
+  }
+}
+
+// content
+.content {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 30px 20px 50px;
+  & h1 {
+    font-family: 'Press Start 2P', cursive;
+    font-size: 1.5em;
+  }
 }
