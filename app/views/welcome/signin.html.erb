@@ -2,8 +2,45 @@
 
 <div id="signin" class="container content">
   <h1>Sign In</h1>
-  <div class="block">
-    <p>bla bla bla</p>
+  <div class="content">
+    <div class="form-sign">
+      <div class="group-tab sign">
+        <div class="item-tab">
+          <%= link_to 'signup', welcome_signup_path %>
+        </div>
+        <div class="item-tab actived">
+          <%= link_to 'signin', welcome_signin_path %>
+        </div>
+      </div>
+
+      <form>
+        <div class="form-group">
+          <label for="username">Your username or email</label>
+          <input type="text" class="form-control" placeholder="Username or Email">
+        </div>
+        <div class="form-group">
+          <label for="password">Choose a password</label>
+          <input type="password" class="form-control" placeholder="Password">
+        </div>
+        <div class="form-check">
+          <input type="checkbox" class="form-check-input">
+          <label class="form-check-label" for="">Keep me loged in</label>
+        </div>
+        <button type="submit" class="btn btn-primary">Log In</button>
+      </form>
+
+      <div class="social-sign">
+        <p><%= link_to 'Do not remember your access details', welcome_recover_path %>.</p>
+        <div class="">
+          <a href="#" class="btn">Sign In with Facebook</a>
+          <a href="#" class="btn">Sign In with Twitter</a>
+          <a href="#" class="btn">Sign In with Instagram</a>
+          <a href="#" class="btn">Sign In with GitHub</a>
+          <a href="#" class="btn">Sign In with Linkedin</a>
+          <a href="#" class="btn">Sign In with Google+</a>
+        </div>
+      </div>
+    </div>
   </div>
 </div>
 

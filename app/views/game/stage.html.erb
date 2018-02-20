@@ -1,10 +1,78 @@
 <%= render 'welcome/header' %>
 
-<div id="stage" class="container content">
+<div id="stage" class="block-content">
   <h1>Stage</h1>
-  <div class="block">
-    <%= link_to 'Question', game_question_path, class: "btn btn-outline-primary" %>
+  <div class="content">
+
+    <div class="story">
+      <div class="dialogue">
+        <h1>Hey fella!</h1>
+        <div class="text">
+          <p>Bla bla bla</p>
+        </div>
+      </div>
+
+      <div class="hero">
+        <div class="says">
+        </div>
+        <div class="character">
+        </div>
+      </div>
+    </div>
+
+    <div class="quest-list">
+      <div class="question">
+        <div class="title">
+          <h4>What is the name of the mother of Marie Clementine?</h4>
+        </div>
+        <div class="answers">
+          <div class="form-check">
+            <label class="form-check-label">
+              <input type="radio" class="form-check-input" name="heroradios" id="fred" value="fred">
+              Delfina
+            </label>
+          </div>
+          <div class="form-check">
+            <label class="form-check-label">
+              <input type="radio" class="form-check-input" name="heroradios" id="chloe" value="chloe">
+              Joaquina
+            </label>
+          </div>
+          <div class="form-check">
+            <label class="form-check-label">
+              <input type="radio" class="form-check-input" name="heroradios" id="greg" value="fred">
+              Mae Joana
+            </label>
+          </div>
+          <div class="form-check">
+            <label class="form-check-label">
+              <input type="radio" class="form-check-input" name="heroradios" id="new" value="chloe">
+              Pauline von Metternich
+            </label>
+          </div>
+        </fieldset>
+        <%= link_to 'OK', game_congrats_path, class: "btn btn-outline-primary" %>
+        </div>
+      </div>
+
+      <div class="status">
+        <div class="help-cards">
+        </div>
+        <div class="helth">
+          100%
+        </div>
+        <div class="scores">
+          10 points
+        </div>
+      </div>
+
+      <div class="terminal">
+      </div>
+
+      <div class="view-map">
+      </div>
+
+    </div>
+
   </div>
 </div>
-
-<%= render 'welcome/footer' %>

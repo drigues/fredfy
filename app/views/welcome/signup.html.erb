@@ -1,10 +1,48 @@
 <%= render 'welcome/header' %>
 
-<div id="signup" class="container content">
+<div id="signup" class="block-content">
   <h1>Sign up</h1>
-  <div class="block">
-    <p>bla bla bla</p>
+  <div class="content">
+
+    <div class="form-sign">
+      <div class="group-tab sign">
+        <div class="item-tab actived">
+          <%= link_to 'signup', welcome_signup_path %>
+        </div>
+        <div class="item-tab">
+          <%= link_to 'signin', welcome_signin_path %>
+        </div>
+      </div>
+
+      <form>
+        <div class="form-group">
+          <label for="username">Choose an username</label>
+          <input type="text" class="form-control" placeholder="Username">
+        </div>
+        <div class="form-group">
+          <label for="email">Your email address</label>
+          <input type="email" class="form-control" placeholder="Email">
+        </div>
+        <div class="form-group">
+          <label for="password">Choose a password</label>
+            <input type="password" class="form-control" placeholder="Password">
+        </div>
+        <button type="submit" class="btn btn-primary">Create Account</button>
+      </form>
+
+      <div class="social-sign">
+        <p>By signing up you agree to our <%= link_to 'Terms of Service', welcome_terms_path %>.</p>
+        <div class="">
+          <a href="#" class="btn">Sign Up with Facebook</a>
+          <a href="#" class="btn">Sign Up with Twitter</a>
+          <a href="#" class="btn">Sign Up with Instagram</a>
+          <a href="#" class="btn">Sign Up with GitHub</a>
+          <a href="#" class="btn">Sign Up with Linkedin</a>
+          <a href="#" class="btn">Sign Up with Google+</a>
+        </div>
+      </div>
+    </div>
+
   </div>
-</div>
 
 <%= render 'welcome/footer' %>

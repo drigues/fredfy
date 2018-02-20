@@ -1,10 +1,8 @@
 <%= render 'welcome/header' %>
 
-<div id="congrats" class="container content">
+<div id="congrats" class="block-content">
   <h1>Congratulations!!</h1>
-  <div class="block">
-
+  <div class="content">
+    <%= link_to 'Start a new game', game_hero_path, class: "btn btn-outline-primary" %>
   </div>
 </div>
-
-<%= render 'welcome/footer' %>

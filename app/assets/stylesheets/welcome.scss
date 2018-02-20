@@ -9,19 +9,30 @@
 // font-family: 'Roboto', sans-serif;
 
 // global
+body{
+  background: $bg-main;
+}
+
 html .container-fluid {
   padding: 0;
   font-family: 'Roboto', sans-serif;
   font-size: 1em;
-
   line-height: 1em;
 }
 
-.bg-light {
-  background: #ebebeb !important;
+a{
+  color: #666;
+  &:hover {
+    color: #222;
+  }
 }
 
+
 // header
+.navbar {
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+}
+
 .logo h1 {
   font-family: 'Bungee', Impact, Arial;
   font-size: 2em;
@@ -32,7 +43,7 @@ html .container-fluid {
 
 .logo h2 {
   font-family: 'Press Start 2P', Verdana, Arial;
-  font-size: 1em;
+  font-size: .8em;
   margin-top: -10px;
 }
 
@@ -42,13 +53,18 @@ html .container-fluid {
   margin-right: 0 !important;
 }
 
+.navbar-nav a{
+  text-transform: uppercase;
+  font-size: .9em;
+}
+
 // footer
 
 #footer {
   max-width: $sz-full;
   margin: 10px auto;
-  border-top: 1px solid rgba(0, 0, 0, 0.2);
-  padding: 10px;
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+  padding: 25px 50px;
   display: flex;
   justify-content: space-around;
 
@@ -58,6 +74,7 @@ html .container-fluid {
   & .logo {
     flex-direction: column;
     flex-grow: 1;
+    opacity: .3;
   }
   & .links {
     display: flex;
@@ -66,15 +83,73 @@ html .container-fluid {
   }
 }
 
+// index
+
+#world .btn,
+#hero .btn,
+#home .btn{
+  width: 300px;
+  margin: auto;
+  text-transform: uppercase;
+  position: absolute;
+  right: 0;
+  left: 0;
+}
+
 // content
-.content {
+.block-content {
   width: 100%;
+  min-height: 400px;
   box-sizing: border-box;
   padding: 30px 20px 50px;
 
-  & h1 {
+  & > h1 {
     font-family: 'Press Start 2P', Verdana, Arial;
     font-size: 1.5em;
     text-align: center;
   }
 }
+
+.content{
+  max-width: $sz-xxl;
+  margin: auto;
+  padding: 20px;
+}
+
+
+/****************************/
+/****************************/
+/****************************/
+
+/*EXTRA_LARGE SCREENS*/
+@media (max-width: 1199px) {
+  .content{
+    max-width: $sz-full;
+  }
+
+  #footer {
+    max-width: $sz-full;
+  }
+
+} /*END max-width: 1199px*/
+
+
+/*LARGE SCREENS*/
+@media (max-width: 991px) {
+
+
+} /*END LARGE SCREENS - max-width: 991px*/
+
+
+/*MEDIUM SCREENS*/
+@media (max-width: 767px) {
+
+
+} /*END MEDIUM SCREENS - max-width: 767px*/
+
+
+/*SMALL SCREENS*/
+@media (max-width: 575px) {
+
+
+} /*END SMALL SCREENS - max-width: 575px*/

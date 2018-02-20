@@ -1,21 +1,29 @@
 <%= render 'welcome/header' %>
 
-<div id="world" class="container content">
+<div id="world" class="block-content">
   <h1>Choose a world</h1>
-  <div class="block">
-
-
-    <div class="field">
-      <%= radio_button_tag(:age, "child") %>
-      <%= label_tag(:age_child, "HTML5") %>
-
-      <%= radio_button_tag(:age, "adult") %>
-      <%= label_tag(:age_adult, "CSS3") %>
-
-      <%= radio_button_tag(:age, "adult") %>
-      <%= label_tag(:age_adult, "JavaScript") %>
-    </div>
-    <%= link_to 'Start the adventure', game_map_path, class: "btn btn-outline-primary btn-block" %>
+  <div class="content">
+    <fieldset class="form-group hero">
+      <div class="form-check fred">
+        <label class="form-check-label">
+          <input type="radio" class="form-check-input" name="heroradios" id="fred" value="fred">
+          HTML 5
+        </label>
+      </div>
+      <div class="form-check chloe">
+        <label class="form-check-label">
+          <input type="radio" class="form-check-input" name="heroradios" id="chloe" value="chloe">
+          CSS 3
+        </label>
+      </div>
+      <div class="form-check greg">
+        <label class="form-check-label">
+          <input type="radio" class="form-check-input" name="heroradios" id="greg" value="fred">
+          JavaScript
+        </label>
+      </div>
+    </fieldset>
+    <%= link_to 'Start the adventure', game_map_path, class: "btn btn-outline-primary btn-lg" %>
   </div>
 </div>
 

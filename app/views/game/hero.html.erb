@@ -1,23 +1,37 @@
 <%= render 'welcome/header' %>
 
-<div id="hero" class="container content">
+<div id="hero" class="block-content">
   <h1>Choose a Hero</h1>
-  <div class="field">
-    <%= radio_button_tag(:age, "child") %>
-    <%= label_tag(:age_child, "Fred") %>
-
-    <%= radio_button_tag(:age, "adult") %>
-    <%= label_tag(:age_adult, "Chloe") %>
-
-    <%= radio_button_tag(:age, "adult") %>
-    <%= label_tag(:age_adult, "Greg") %>
-
-    <%= radio_button_tag(:age, "adult") %>
-    <%= label_tag(:age_adult, "Piu") %>
+  <div class="content">
+    <fieldset class="form-group hero">
+      <div class="form-check fred">
+        <label class="form-check-label">
+          <input type="radio" class="form-check-input" name="heroradios" id="fred" value="fred">
+          Fred
+        </label>
+      </div>
+      <div class="form-check chloe">
+        <label class="form-check-label">
+          <input type="radio" class="form-check-input" name="heroradios" id="chloe" value="chloe">
+          Chloe
+        </label>
+      </div>
+      <div class="form-check greg">
+        <label class="form-check-label">
+          <input type="radio" class="form-check-input" name="heroradios" id="greg" value="fred">
+          Fred
+        </label>
+      </div>
+      <div class="form-check piu">
+        <label class="form-check-label">
+          <input type="radio" class="form-check-input" name="heroradios" id="new" value="chloe">
+          new
+        </label>
+      </div>
+    </fieldset>
+    <%= link_to 'Continue', game_world_path, class: "btn btn-outline-primary btn-lg" %>
   </div>
-  <div class="block">
-    <%= link_to 'Continue', game_world_path, class: "btn btn-outline-primary btn-block" %>
-  </div>
+
 </div>
 
 <%= render 'welcome/footer' %>
