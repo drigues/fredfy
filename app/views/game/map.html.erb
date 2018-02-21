@@ -2,100 +2,102 @@
 
 <div id="map" class="block-content">
   <h1>Map</h1>
-  <div class="content">
-    <div class="journey">
+  <div class="content row">
+    <div class="journey col-md-6">
       <p class="greetings">Nice that you are stating a new world adventure!</p>
       <div class="phases">
-        <div class="level one">
+        <div class="row one">
           <div class="stage">
-            <%= link_to 'Stage 1', game_stage_path %>
+            <%= link_to 'Stage 1', game_stage_path, class: "btn btn-outline-primary btn-lg" %>
           </div>
-          <div class="stage">
-            <%= link_to 'Stage 2', game_stage_path %>
+          <div class="stage disabled">
+            <%= link_to 'Stage 2', game_stage_path, class: "btn btn-outline-primary btn-lg" %>
           </div>
-          <div class="stage">
-            <%= link_to 'Stage 3', game_stage_path %>
-          </div>
-        </div>
-        <div class="level two">
-          <div class="stage">
-            <%= link_to 'Stage 1', game_stage_path %>
-          </div>
-          <div class="stage">
-            <%= link_to 'Stage 2', game_stage_path %>
-          </div>
-          <div class="stage">
-            <%= link_to 'Stage 3', game_stage_path %>
+          <div class="stage disabled">
+            <%= link_to 'Stage 3', game_stage_path, class: "btn btn-outline-primary btn-lg" %>
           </div>
         </div>
-        <div class="level three">
-          <div class="stage">
-            <%= link_to 'Stage 1', game_stage_path %>
+        <div class="row two">
+          <div class="stage disabled">
+            <%= link_to 'Stage 4', game_stage_path, class: "btn btn-outline-primary btn-lg" %>
           </div>
-          <div class="stage">
-            <%= link_to 'Stage 2', game_stage_path %>
+          <div class="stage disabled">
+            <%= link_to 'Stage 5', game_stage_path, class: "btn btn-outline-primary btn-lg" %>
           </div>
-          <div class="stage">
-            <%= link_to 'Stage 3', game_stage_path %>
-          </div>
-        </div>
-        <div class="level four">
-          <div class="stage">
-            <%= link_to 'Stage 1', game_stage_path %>
-          </div>
-          <div class="stage">
-            <%= link_to 'Stage 2', game_stage_path %>
-          </div>
-          <div class="stage">
-            <%= link_to 'Stage 3', game_stage_path %>
+          <div class="stage disabled">
+            <%= link_to 'Stage 6', game_stage_path, class: "btn btn-outline-primary btn-lg" %>
           </div>
         </div>
-      </div>
-    </div>
-
-    <div class="invetory">
-      <h3>Inventory</h3>
-      <div class="itens">
-        <div class="one disabled">
-          Basics
+        <div class="row three">
+          <div class="stage disabled">
+            <%= link_to 'Stage 7', game_stage_path, class: "btn btn-outline-primary btn-lg" %>
+          </div>
+          <div class="stage disabled">
+            <%= link_to 'Stage 8', game_stage_path, class: "btn btn-outline-primary btn-lg" %>
+          </div>
+          <div class="stage disabled">
+            <%= link_to 'Stage 9', game_stage_path, class: "btn btn-outline-primary btn-lg" %>
+          </div>
         </div>
-        <div class="two disabled">
-          Layout
-        </div>
-        <div class="three disabled">
-          Forms
-        </div>
-        <div class="four disabled">
-          Links
-        </div>
-        <div class="five disabled">
-          Imports
-        </div>
-        <div class="six disabled">
-          Responsive
+        <div class="row four">
+          <div class="stage disabled">
+            <%= link_to 'Stage 10', game_stage_path, class: "btn btn-outline-primary btn-lg" %>
+          </div>
+          <div class="stage disabled">
+            <%= link_to 'Stage 11', game_stage_path, class: "btn btn-outline-primary btn-lg" %>
+          </div>
+          <div class="stage disabled">
+            <%= link_to 'Stage 12', game_stage_path, class: "btn btn-outline-primary btn-lg" %>
+          </div>
         </div>
       </div>
     </div>
 
-    <div class="profile">
-      <div class="health">
-        100%
-      </div>
-      <div class="scores">
-        0 scores
-      </div>
-    </div>
-
-    <div class="ranking">
-      <div class="user">
-        <div class="pic">
-
+    <div class="details col-md-6">
+      <div class="invetory">
+        <h3>Inventory</h3>
+        <div class="itens">
+          <div class="one disabled">
+            Basics
+          </div>
+          <div class="two disabled">
+            Layout
+          </div>
+          <div class="three disabled">
+            Forms
+          </div>
+          <div class="four disabled">
+            Links
+          </div>
+          <div class="five disabled">
+            Imports
+          </div>
+          <div class="six disabled">
+            Responsive
+          </div>
         </div>
-        <div class="name">
-          Thiago Rodrigues
+      </div>
+
+      <div class="profile">
+        <div class="health">
+          100%
         </div>
         <div class="scores">
-          6969 <span>scores</span>
+          0 scores
+        </div>
+      </div>
+
+      <div class="ranking">
+        <div class="user">
+          <div class="pic">
+
+          </div>
+          <div class="name">
+            Thiago Rodrigues
+          </div>
+          <div class="scores">
+            6969 <span>scores</span>
+          </div>
         </div>
       </div>
     </div>

@@ -137,11 +137,12 @@ a {
 // hero
 .hero {
   & .form-check {
-    margin: 10px 0;
+    margin: 20px 0;
+
     & label {
       display: block;
-      width: 300px;
-      min-height: 350px;
+      width: 450px;
+      min-height: 200px;
       margin: auto;
       background: white;
       border-radius: 10px;
@@ -149,13 +150,18 @@ a {
       box-sizing: border-box;
       padding: 20px;
       text-transform: uppercase;
+      border: 1px solid white;
+    }
+    & label:hover {
+      background: rgba(0, 123, 255, 0.5);
+      border: 1px solid rgba(0, 123, 255, 1);
     }
     & input {
       // display: none;
     }
 
-    & input[type='radio']:checked {
-      background: red;
+    & input[type='radio']:checked + label {
+      background: red !important;
     }
   }
 
@@ -171,6 +177,32 @@ a {
 
 // world
 .world {
+  & .form-check {
+    margin: 10px 0;
+    & label {
+      display: block;
+      width: 300px;
+      min-height: 350px;
+      margin: auto;
+      background: white;
+      border-radius: 10px;
+      text-align: center;
+      box-sizing: border-box;
+      padding: 20px;
+      text-transform: uppercase;
+      border: 1px solid white;
+    }
+    & label:hover {
+      background: rgba(0, 123, 255, 0.5);
+      border: 1px solid $b-blue;
+    }
+    & input {
+      // display: none;
+    }
+    & input[type='radio']:checked + label {
+      background: red !important;
+    }
+  }
   & .languange {
   }
   & .html {
@@ -181,8 +213,72 @@ a {
   }
 }
 
+// Map
+#map .journey {
+  padding: 10px;
+  border: 1px solid #222;
+  & .greetings {
+  }
+  & .phases {
+    & .row {
+      padding: 10px;
+
+      & .stage {
+        margin: 20px;
+      }
+      & .stage a {
+        padding: 10px;
+        width: 55px;
+        height: 55px;
+        // background: white;
+        // border: 1px solid #333;
+        font-size: 0.6em;
+        display: block;
+        text-align: center;
+        word-wrap: break-word;
+      }
+      & .stage.disabled a {
+        opacity: 0.3;
+        cursor: default;
+
+        &:hover {
+          background: $bg-main;
+          border: 1px solid $b-blue;
+          color: $b-blue;
+        }
+      }
+    }
+    & .one {
+    }
+    & .two {
+    }
+    & .three {
+    }
+    & .four {
+    }
+  }
+}
+
+#map .details {
+  & > div {
+    padding: 10px;
+    margin: 10px;
+    border: 1px solid #222;
+  }
+  & .invetory {
+  }
+  & .profile {
+  }
+  & .ranking {
+  }
+}
+
 //stage
 #stage .story {
+  padding: 10px;
+  margin: 10px;
+  border: 1px solid #222;
+
   & .dialogue {
     & h1 {
     }
@@ -224,27 +320,6 @@ a {
 }
 
 #stage .view-map {
-}
-
-// Map
-#map .journey {
-  & .greetings {
-  }
-  & .phases {
-    & .level {
-    }
-    & .one {
-    }
-    & .two {
-    }
-    & .three {
-    }
-    & .four {
-    }
-  }
-}
-
-#map .invetory {
 }
 
 /****************************/
