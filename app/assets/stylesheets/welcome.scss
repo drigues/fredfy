@@ -9,7 +9,7 @@
 // font-family: 'Roboto', sans-serif;
 
 // global
-body{
+body {
   background: $bg-main;
 }
 
@@ -20,13 +20,12 @@ html .container-fluid {
   line-height: 1em;
 }
 
-a{
+a {
   color: #666;
   &:hover {
     color: #222;
   }
 }
-
 
 // header
 .navbar {
@@ -43,7 +42,7 @@ a{
 
 .logo h2 {
   font-family: 'Press Start 2P', Verdana, Arial;
-  font-size: .8em;
+  font-size: 0.8em;
   margin-top: -10px;
 }
 
@@ -53,9 +52,9 @@ a{
   margin-right: 0 !important;
 }
 
-.navbar-nav a{
+.navbar-nav a {
   text-transform: uppercase;
-  font-size: .9em;
+  font-size: 0.9em;
 }
 
 // footer
@@ -73,7 +72,7 @@ a{
   & .logo {
     flex-direction: column;
     flex-grow: 1;
-    opacity: .3;
+    opacity: 0.3;
   }
   & .links {
     display: flex;
@@ -96,19 +95,18 @@ a{
   }
 }
 
-.content{
+.content {
   max-width: $sz-xxl;
   margin: auto;
   padding: 20px;
 }
-
 
 // homepage
 #gameover .btn,
 #congrats .btn,
 #world .btn,
 #hero .btn,
-#home .btn{
+#home .btn {
   width: 300px;
   margin: auto;
   text-transform: uppercase;
@@ -117,147 +115,137 @@ a{
   left: 0;
 }
 
-.landing-img{
-
+.landing-img {
 }
 
 // ranking
-.ranking{
-  & .user{
-
+.ranking {
+  & .user {
     & .pic {
-
     }
-    & .name{
-
+    & .name {
     }
-    & .scores{
-
-      & span{
-
+    & .scores {
+      & span {
       }
-
     }
   }
-  & .king{
+  & .king {
+  }
+}
 
+// hero
+.hero {
+  & .form-check {
+    margin: 10px 0;
+    & label {
+      display: block;
+      width: 300px;
+      min-height: 350px;
+      margin: auto;
+      background: white;
+      border-radius: 10px;
+      text-align: center;
+      box-sizing: border-box;
+      padding: 20px;
+      text-transform: uppercase;
+    }
+    & input {
+      // display: none;
+    }
+
+    & input[type='radio']:checked {
+      background: red;
+    }
+  }
+
+  & .fred {
+  }
+  &.chloe {
+  }
+  & .greg {
+  }
+  & .piu {
   }
 }
 
 // world
 .world {
-
-  & .languange{
-
+  & .languange {
   }
-  & .html{
-
+  & .html {
   }
-  & .css{
-
+  & .css {
   }
-  & .js{
-
+  & .js {
   }
 }
 
 //stage
 #stage .story {
-
-  & .dialogue{
-
+  & .dialogue {
     & h1 {
-
     }
-    & .text{
-
+    & .text {
     }
   }
 
-  & .hero{
-
-    & .says{
-
+  & .hero {
+    & .says {
     }
-    & .character{
-
+    & .character {
     }
   }
-
 }
 
-#stage .quest-list{
-
-  & .question{
-
+#stage .quest-list {
+  & .question {
     & .title {
-
     }
     & .answers {
-
     }
-    & .ok-answer{
-
+    & .ok-answer {
     }
   }
-
 }
 
-#stage .status{
-
-  & .help-cards{
-
+#stage .status {
+  & .help-cards {
   }
   & .helth {
-
   }
   & .scores {
-
-    & span{
-
+    & span {
     }
   }
 }
 
-#stage .terminal{
-
+#stage .terminal {
 }
 
-#stage .view-map{
-
+#stage .view-map {
 }
 
 // Map
 #map .journey {
-
-  & .greetings{
-
+  & .greetings {
   }
-  & .phases{
-
-    & .level{
-
+  & .phases {
+    & .level {
     }
-    & .one{
-
+    & .one {
     }
-    & .two{
-
+    & .two {
     }
-    & .three{
-
+    & .three {
     }
-    & .four{
-
+    & .four {
     }
   }
-
 }
 
 #map .invetory {
-
 }
-
 
 /****************************/
 /****************************/
@@ -265,33 +253,23 @@ a{
 
 /*EXTRA_LARGE SCREENS*/
 @media (max-width: 1199px) {
-  .content{
+  .content {
     max-width: $sz-full;
   }
 
   #footer {
     max-width: $sz-full;
   }
-
 } /*END max-width: 1199px*/
-
 
 /*LARGE SCREENS*/
 @media (max-width: 991px) {
-
-
 } /*END LARGE SCREENS - max-width: 991px*/
-
 
 /*MEDIUM SCREENS*/
 @media (max-width: 767px) {
-
-
 } /*END MEDIUM SCREENS - max-width: 767px*/
-
 
 /*SMALL SCREENS*/
 @media (max-width: 575px) {
-
-
 } /*END SMALL SCREENS - max-width: 575px*/
