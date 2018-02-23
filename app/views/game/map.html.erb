@@ -3,77 +3,97 @@
 <div id="map" class="block-content">
   <h1>Map</h1>
   <div class="content row">
-    <div class="journey col-md-6">
+    <div class="journey col-md-7">
       <p class="greetings">Nice that you are stating a new world adventure!</p>
-      <div class="phases">
+      <div class="phases col-md-12">
         <div class="row one">
           <div class="stage">
             <%= link_to 'Stage 1', game_stage_path, class: "btn btn-outline-primary btn-lg" %>
           </div>
-          <div class="stage disabled">
+          <div class="stage">
             <%= link_to 'Stage 2', game_stage_path, class: "btn btn-outline-primary btn-lg" %>
           </div>
-          <div class="stage disabled">
+          <div class="stage">
             <%= link_to 'Stage 3', game_stage_path, class: "btn btn-outline-primary btn-lg" %>
           </div>
         </div>
         <div class="row two">
-          <div class="stage disabled">
+          <div class="stage">
             <%= link_to 'Stage 4', game_stage_path, class: "btn btn-outline-primary btn-lg" %>
           </div>
-          <div class="stage disabled">
+          <div class="stage">
             <%= link_to 'Stage 5', game_stage_path, class: "btn btn-outline-primary btn-lg" %>
-          </div>
-          <div class="stage disabled">
-            <%= link_to 'Stage 6', game_stage_path, class: "btn btn-outline-primary btn-lg" %>
           </div>
         </div>
         <div class="row three">
-          <div class="stage disabled">
+          <div class="stage">
+            <%= link_to 'Stage 6', game_stage_path, class: "btn btn-outline-primary btn-lg" %>
+          </div>
+          <div class="stage">
             <%= link_to 'Stage 7', game_stage_path, class: "btn btn-outline-primary btn-lg" %>
           </div>
-          <div class="stage disabled">
+          <div class="stage">
             <%= link_to 'Stage 8', game_stage_path, class: "btn btn-outline-primary btn-lg" %>
           </div>
-          <div class="stage disabled">
+          <div class="stage">
             <%= link_to 'Stage 9', game_stage_path, class: "btn btn-outline-primary btn-lg" %>
           </div>
         </div>
         <div class="row four">
-          <div class="stage disabled">
+          <div class="stage">
             <%= link_to 'Stage 10', game_stage_path, class: "btn btn-outline-primary btn-lg" %>
           </div>
-          <div class="stage disabled">
+          <div class="stage">
             <%= link_to 'Stage 11', game_stage_path, class: "btn btn-outline-primary btn-lg" %>
           </div>
-          <div class="stage disabled">
+          <div class="stage">
             <%= link_to 'Stage 12', game_stage_path, class: "btn btn-outline-primary btn-lg" %>
+          </div>
+        </div>
+        <div class="row five">
+          <div class="stage">
+            <%= link_to 'Stage 13', game_stage_path, class: "btn btn-outline-primary btn-lg" %>
+          </div>
+          <div class="stage">
+            <%= link_to 'Stage 14', game_stage_path, class: "btn btn-outline-primary btn-lg" %>
+          </div>
+          <div class="stage">
+            <%= link_to 'Stage 15', game_stage_path, class: "btn btn-outline-primary btn-lg" %>
           </div>
         </div>
       </div>
     </div>
 
-    <div class="details col-md-6">
+    <div class="details col-md-5">
       <div class="invetory">
         <h3>Inventory</h3>
         <div class="itens">
-          <div class="one disabled">
-            Basics
+          <div class="1 popover__wrapper">
+            <span></span>
+            <p>Basics</p>
+            <div class="push popover__content">
+              <p class="popover__message">How you doin'?</p>
+            </div>
           </div>
-          <div class="two disabled">
-            Layout
+          <div class="2 disabled">
+            <span></span>
+            <p>Layout</p>
           </div>
-          <div class="three disabled">
-            Forms
+          <div class="3 disabled">
+            <span></span>
+            <p>Forms</p>
           </div>
-          <div class="four disabled">
-            Links
+          <div class="4 disabled">
+            <span></span>
+            <p>Links</p>
           </div>
-          <div class="five disabled">
-            Imports
+          <div class="5 disabled">
+            <span></span>
+            <p>Imports</p>
           </div>
-          <div class="six disabled">
-            Responsive
+          <div class="6 disabled">
+            <span></span>
+            <p>Responsive</p>
           </div>
         </div>
       </div>
@@ -88,18 +108,12 @@
       </div>
 
       <div class="ranking">
-        <div class="user">
-          <div class="pic">
-
-          </div>
-          <div class="name">
-            Thiago Rodrigues
-          </div>
-          <div class="scores">
-            6969 <span>scores</span>
-          </div>
+        <h3>Ranking</h3>
+        <div>
+          <%= render 'game/ranking-list' %>
         </div>
       </div>
+
     </div>
 
   </div>

@@ -3,6 +3,7 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
 @import '_variables.scss';
+@import '_placeholder.scss';
 @import url('https://fonts.googleapis.com/css?family=Bungee|Press+Start+2P|Roboto');
 // font-family: 'Press Start 2P', cursive;
 // font-family: 'Bungee', cursive;
@@ -13,11 +14,12 @@ body {
   background: $bg-main;
 }
 
-html .container-fluid {
+html .container {
   padding: 0;
   font-family: 'Roboto', sans-serif;
   font-size: 1em;
   line-height: 1em;
+  max-width: 100% !important;
 }
 
 a {
@@ -124,6 +126,8 @@ a {
     & .pic {
     }
     & .name {
+      font-family: 'Press Start 2P', Verdana, Arial;
+      font-size: 0.8em;
     }
     & .scores {
       & span {
@@ -164,14 +168,19 @@ a {
       background: red !important;
     }
   }
-
+  & .locked {
+  }
   & .fred {
   }
-  &.chloe {
+  & .chloe {
   }
   & .greg {
   }
   & .piu {
+  }
+  & .ciara {
+  }
+  & .liz {
   }
 }
 
@@ -214,33 +223,48 @@ a {
 }
 
 // Map
+#map {
+  background: linear-gradient(
+    #22a7f0,
+    #19b5fe,
+    #89c4f4 50%,
+    #5b8930 20%,
+    #006442,
+    #407a52
+  );
+}
 #map .journey {
-  padding: 10px;
-  border: 1px solid #222;
   & .greetings {
+    background: #fff;
+    padding: 10px;
+    margin-bottom: 10px;
   }
   & .phases {
+    width: 100%;
+    flex-direction: column !important;
+    display: flex;
     & .row {
       padding: 10px;
-
+      display: flex;
+      flex-direction: row;
+      justify-content: space-around;
+      align-items: center;
       & .stage {
+        display: flex;
         margin: 20px;
-      }
-      & .stage a {
-        padding: 10px;
-        width: 55px;
-        height: 55px;
-        // background: white;
-        // border: 1px solid #333;
-        font-size: 0.6em;
-        display: block;
-        text-align: center;
-        word-wrap: break-word;
+        & a {
+          padding: 10px;
+          width: 55px;
+          height: 55px; // background: white; // border: 1px solid #333;
+          font-size: 0.6em;
+          display: block;
+          text-align: center;
+          word-wrap: break-word;
+        }
       }
       & .stage.disabled a {
         opacity: 0.3;
         cursor: default;
-
         &:hover {
           background: $bg-main;
           border: 1px solid $b-blue;
@@ -249,43 +273,92 @@ a {
       }
     }
     & .one {
+      height: 150px;
+      background: #fafafa;
     }
     & .two {
+      height: 300px;
+      background: #f3f3f3;
     }
     & .three {
+      height: 450px;
+      background: #eee;
     }
     & .four {
+      height: 750px;
+      background: #e3e3e3;
+    }
+    & .five {
+      height: 1300px;
+      background: #d3d3d3;
     }
   }
 }
-
-#map .details {
-  & > div {
+#map .invetory {
+  display: flex;
+  flex-direction: column;
+  h3 {
+    @extend %header-box;
+  }
+  & .itens {
+    @extend %box-map;
+    @extend %be-flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    & div {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      margin: 20px 0;
+      width: 40%;
+    }
+    & .disabled {
+      opacity: 0.2;
+    }
+  }
+  & span {
+    width: 50px;
+    min-height: 50px;
+    display: flex;
+    background-image: image-url('inventory.svg');
+    background-repeat: no-repeat;
+    background-position: left center;
+    background-size: auto 40px;
     padding: 10px;
-    margin: 10px;
-    border: 1px solid #222;
+    background-color: red;
+    border-radius: 8px;
+    margin-right: 10px;
   }
-  & .invetory {
-  }
-  & .profile {
-  }
-  & .ranking {
+  & p {
+    display: flex;
+    margin: 0;
   }
 }
-
-//stage
+#map .details {
+  & .profile {
+    margin: 20px 0;
+    @extend %box-map;
+  }
+  & .ranking {
+    h3 {
+      @extend %header-box;
+    }
+    & > div {
+      @extend %box-map;
+    }
+  }
+}
+// stage
 #stage .story {
   padding: 10px;
   margin: 10px;
   border: 1px solid #222;
-
   & .dialogue {
     & h1 {
     }
     & .text {
     }
   }
-
   & .hero {
     & .says {
     }
@@ -293,7 +366,6 @@ a {
     }
   }
 }
-
 #stage .quest-list {
   & .question {
     & .title {
@@ -304,7 +376,6 @@ a {
     }
   }
 }
-
 #stage .status {
   & .help-cards {
   }
@@ -315,36 +386,83 @@ a {
     }
   }
 }
-
 #stage .terminal {
+  width: 50px;
+  height: 50px;
+  background-image: image-url('terminal.svg');
+  background-repeat: no-repeat;
+  background-position: left center;
+  background-size: auto 40px;
 }
-
 #stage .view-map {
+  width: 50px;
+  height: 50px;
+  background-image: image-url('map.svg');
+  background-repeat: no-repeat;
+  background-position: left center;
+  background-size: auto 40px;
 }
-
-/****************************/
-/****************************/
-/****************************/
-
-/*EXTRA_LARGE SCREENS*/
+/* ************************** */
+/* ************************** */
+/* ************************** */
+/* EXTRA_LARGE SCREENS */
 @media (max-width: 1199px) {
   .content {
     max-width: $sz-full;
   }
-
   #footer {
     max-width: $sz-full;
   }
-} /*END max-width: 1199px*/
-
-/*LARGE SCREENS*/
+}
+/* END max-width: 1199px */
+/* LARGE SCREENS */
 @media (max-width: 991px) {
-} /*END LARGE SCREENS - max-width: 991px*/
-
-/*MEDIUM SCREENS*/
+}
+/* END LARGE SCREENS - max-width: 991px */
+/* MEDIUM SCREENS */
 @media (max-width: 767px) {
-} /*END MEDIUM SCREENS - max-width: 767px*/
-
-/*SMALL SCREENS*/
+}
+/* END MEDIUM SCREENS - max-width: 767px */
+/* SMALL SCREENS */
 @media (max-width: 575px) {
-} /*END SMALL SCREENS - max-width: 575px*/
+}
+/* END SMALL SCREENS - max-width: 575px */
+// ///
+// ///
+// ///
+// ///
+.popover__content {
+  opacity: 0;
+  visibility: hidden;
+  position: absolute;
+  top: 140px;
+  left: -20px;
+  transform: translate(0, 10px);
+  background-color: #fff;
+  padding: 1.5rem;
+  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.26);
+  width: auto;
+}
+.popover__content:before {
+  position: absolute;
+  z-index: -1;
+  content: '';
+  right: calc(50% - 10px);
+  top: -8px;
+  border-style: solid;
+  border-width: 0 10px 10px 10px;
+  border-color: transparent transparent #fff transparent;
+  transition-duration: 0.3s;
+  transition-property: transform;
+  transition: all 0.5s cubic-bezier(0.75, -0.02, 0.2, 0.97);
+}
+.popover__wrapper:hover .popover__content {
+  z-index: 10;
+  opacity: 1;
+  visibility: visible;
+  transform: translate(0, -20px);
+  transition: all 0.5s cubic-bezier(0.75, -0.02, 0.2, 0.97);
+}
+.popover__message {
+  text-align: center;
+}
